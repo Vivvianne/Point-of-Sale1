@@ -98,7 +98,7 @@ def make_purchases():
     for prod in product.PRODUCTS:
         if pro_id ==prod.id:
             product_exists = True
-    #         
+           
       
     if customer_exists and product_exists:
 
@@ -131,7 +131,7 @@ def make_purchases():
                         """)
                         choice7 = int(input("Choose a purchase option: "))
                         if choice7 ==1:
-                            make_purchase()
+                            make_purchases()
                         elif choice7 ==2:
                             checkout()
                             break
@@ -143,7 +143,7 @@ def make_purchases():
                         
                 else:
                     print("Quantity in stock is below " +str(purchase_q) + ' : ' +"quantity available:"+str(quantity) )
-                    make_purchase()
+                    make_purchases()
                     break
   
     else:
