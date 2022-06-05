@@ -219,7 +219,7 @@ def find_purchase():
             s = ' '
 
             while(s):
-                s = fo.readLine()
+                s = fo.readline()
                 L = s.split(',')
                 if len(s)>0:
                     if(L[0]) == customer_name:
