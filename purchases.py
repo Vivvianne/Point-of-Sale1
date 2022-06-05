@@ -79,7 +79,7 @@ def list_purchase():
 def make_purchases():
     point.show_customers()
     product.show_products()
-    # enter customer id 
+   
     customer_exists = False
     product_exists = False
     cus_id = input("Enter customer id to purchase: ")
