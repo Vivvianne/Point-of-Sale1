@@ -79,76 +79,79 @@ def list_purchase():
 def make_purchases():
     point.show_customers()
     product.show_products()
-
+    # enter customer id 
     customer_exists = False
     product_exists = False
-
-    customer_id = input("Enter customer id to purchase: ")
-    
-    # check whether customer id exists
-    for c in point.customers:
-        if customer_id == c.id:
+    cus_id = input("Enter customer id to purchase: ")
+    # check if the customer id exists
+    for cus in point.customers:
+        if cus_id == cus.id:
             customer_exists = True
-            customer_name = c.name
-            print("Customer name is: ", customer_name)
+            cus_name = cus.name
+            print("Customer name is:  " , cus_name)
+            break
+           
 
-
-
-    # check whether product exists 
-    product_id = input("Enter product id to purchase: ")
+    
+    # check if product exists
+    pro_id = input("Enter product id to purchase: ") 
     for prod in product.PRODUCTS:
-        if product_id == prod.id:
+        if pro_id ==prod.id:
             product_exists = True
-
+    #         
+      
     if customer_exists and product_exists:
-        # make a purchase
-        purchase_item = int(input("Enter quantity of product to purchase: "))
 
-        # check whether product amount is available
+        # make purchase
+        purchase_q = int(input("Enter quantity of product to purchase: "))
+
+        # checking if amount is available
         for i in range(len(product.PRODUCTS)):
-            if product_id == product.PRODUCTS[i].id:
+            if pro_id == product.PRODUCTS[i].id:
                 name = product.PRODUCTS[i].name
                 quantity = int(product.PRODUCTS[i].quantity)
-                if quantity >= purchase_item:
-
-                    balance = quantity - purchase_item
+                if quantity >= purchase_q:
+                    # update product amount
+                    balance = quantity - purchase_q
+                    # print("Product available")
                     price = float(product.PRODUCTS[i].price)
-                    price_purchased = price * purchase_item
-                    output = Purchase(customer_name, product_id, purchase_item,price_purchased)
+                    price_purchased = price * purchase_q
+                    output = Purchase(cus_name,pro_id,purchase_q,price_purchased)
                     PURCHASES.append(output)
-                    print("Purchase is Successfull!")
+                    print("Purchase successfull!!!")
                     print()
                     print(PURCHASES)
-
-                    
-                    # purchase sub_menu
+                    # update_products()
                     while True:
-                        print("""
+                        print ("""
                         Choose purchase option:
-                        1. Make a purchase
-                        2.Checkout
-                        0.Exit
+                        1. Make another purchase
+                        2. Checkout
+                        3.Exit
                         """)
-                        option7 = int(input("Choose a purchase option: "))
-
-                        if option7 == 1:
-                            make_purchases()
-                        elif option7 == 2:
+                        choice7 = int(input("Choose a purchase option: "))
+                        if choice7 ==1:
+                            make_purchase()
+                        elif choice7 ==2:
                             checkout()
                             break
-                        elif option7 == 0:
+                        elif choice7 ==3:
                             print()
                             break
                         else:
-                            print("Otion is Invalid. Chose again.")
-
-
+                            print("Invalid option!!!")
+                        
                 else:
-                    print("Quantity in stock is below" + str(purchase_item) + ' : ' + "quantity available: " + str(quantity))
-                    make_purchases()
+                    print("Quantity in stock is below " +str(purchase_q) + ' : ' +"quantity available:"+str(quantity) )
+                    make_purchase()
+                    break
+  
+    else:
+        print("Invalid details!!!")
 
-        else:
-            print("Invalid details!")
+
+
+
 
 
 def checkout():
