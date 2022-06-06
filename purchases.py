@@ -165,6 +165,8 @@ def checkout():
         update_products()
         handle_file()
 
+ 
+
 
 def update_products():
     for pur in PURCHASES:
@@ -197,6 +199,7 @@ def handle_file():
         for pur in PURCHASES:
             print(pur.customer_name + ',' + pur.product_id + ',' +str(pur.purchase_item) + ',' + str(pur.price_purchased), file=fo)
 
+  
 
 def find_purchase():
     total = 0
