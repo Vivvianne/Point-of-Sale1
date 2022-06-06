@@ -248,14 +248,14 @@ def find_purchase():
 
             s = ' '
             while(s):
-                s = fo.readLine()
-                L =s.split()
+                s = fo.readline()
+                L =s.split(',')
                 if len(s)>0:
                     if(L[1]) == id:
                         customer_name = L[0]
                         quantity = int(L[2])
                         price = float(L[3])
-                        print(' ')
+                        print( )
                         # calculate the total spent on a product
 
                         total += price
@@ -267,7 +267,7 @@ def find_purchase():
             print('**************')
             print("Total spent: " + str(total))
             print()
-            print("No of products purcahsed: " + str(items_bought))
+            print("No of products purchased: " + str(items_bought))
         
         elif option8 == 3:
             print()
