@@ -138,6 +138,7 @@ def make_purchases():
                         elif choice7 ==3:
                             print()
                             break
+
                         else:
                             print("Invalid option!!!")
                         
@@ -269,7 +270,7 @@ def find_purchase():
             print()
             print("No of products purchased: " + str(items_bought))
         
-        elif option8 == 3:
+        elif option8 == 0:
             print()
             break
 

@@ -138,14 +138,16 @@ def delete_product():
 def show_products():
     product = open("product.txt","r")
     for p in product:
-        
-        prod = p.split(',')
-        id = prod[0]
-        name = prod[1]
-        quantity = int(prod[2])
-        price = prod[3]
-        output = Product(id,name,quantity,price)
-        PRODUCTS.append(output)
+        try:
+            prod = p.split(',')
+            id = prod[0]
+            name = prod[1]
+            quantity = int(prod[2])
+            price = prod[3]
+            output = Product(id,name,quantity,price)
+            PRODUCTS.append(output)
+        except:
+            print()
     
 
 
