@@ -184,7 +184,8 @@ def update_products():
                     quantity = int(L[2])
                     price = L[3]
                     updated_quantity = quantity - pur_quantity
-                    temp.write(str(product_id) + ',' + name + str(updated_quantity) + ',' + str(price))
+                    temp.write(str(product_id) + ',' + name + ',' + str(updated_quantity) + ',' + str(price))
+                    
                 else:
                     temp.write(s)
         temp.close()
