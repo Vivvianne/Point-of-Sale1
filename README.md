@@ -14,18 +14,18 @@ to happen.
 
 A user is presented with a menu that has options of; Customer, Products or purchases.
 
-###Customer
+### Customer
 
 If a user choses customer, the user should be able to create a customer, store the customer details in a txt file, get a list of customers and their details stored in 
 the txt file, seach/find a customer, update customer details and delete a customer.
 
-###Products
+### Products
 
 If a user chooses products, the user should also be able to create a product, store the products and it's details including the quantity and price in a text file, get 
 the product list/inventory, 
 search a product, update a produ and delete a product.
 
-###Purchases
+### Purchases
 
 The user should finaly be able to make a purchase. The customer details especially the customer id is key in making purchases. Here the user has to key in the customer 
 ID making the purchases, then key in the purchase ID to check whether these details exist. If they exist, the user then proceed to make a purchase by keying in the 
