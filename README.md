@@ -51,4 +51,7 @@ Python3
 
 ## Licence
 
+The MIT licence Copyright (c)2022
+Get the license of this application here https://github.com/Vivvianne/Point-of-Sale1/commit/f73abe700dd37630707c4e5dcc3034966465dfc5
+
 
