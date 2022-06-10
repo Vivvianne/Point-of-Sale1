@@ -113,7 +113,7 @@ def make_purchases():
                 if quantity >= purchase_q:
                     # update product amount
                     balance = quantity - purchase_q
-                    # print("Product available")
+                   
                     price = float(product.PRODUCTS[i].price)
                     price_purchased = price * purchase_q
                     output = Purchase(cus_name,pro_id,purchase_q,price_purchased)
