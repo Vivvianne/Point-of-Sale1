@@ -98,9 +98,8 @@ def update_product():
             if J[0] == id:
                 name = input("Enter Product name: ")
                 quantity = input("Enter product quantity : ")
-                # assert quantity >=0, f"{quantity} is not greater or equal to zero!! "
+                assert quantity >=0, f"{quantity} is not greater or equal to zero!! "
                 price = input("Enter the product price : ")
-                # assert price >= 0, f"Price {price} is not greater or equal to zero!! "
                 temp.write(str(id) + ',' +  name  +  ','  +  quantity + ',' + price + "\n")
             else:
                 temp.write(st)

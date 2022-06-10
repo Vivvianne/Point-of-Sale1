@@ -73,11 +73,18 @@ def list_customers():
 
 
 def create_customer():
+    
     pt = open('customer.txt', 'a+', newline='')
     customer_id = input("Enter Customer id : ")
     with open("customer.txt",'r') as pt_r:
+        
         for line in pt_r.readlines():
-            if customer_id in line:
+            element_list = []
+            line_data = line.split(',')
+            element_list.append(line_data[0])
+        
+
+            if customer_id in element_list:
                 print()
                 print("The ID already exists!! Enter a a different ID !!")
                 print()
