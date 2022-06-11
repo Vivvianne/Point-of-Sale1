@@ -21,6 +21,7 @@ def show_product_menu():
         2. Create a product
         3. Update a product
         4. Delete a product
+        5. Search a product
         0. Quit
         """)
 
@@ -41,6 +42,9 @@ def show_product_menu():
         elif option5 == 4:
             print()
             delete_product()
+
+        elif option5 == 5:
+            search_product()
 
         elif option5 == 0:
             print()
@@ -133,6 +137,23 @@ def delete_product():
     list_products()
 
 
+
+def search_product():
+    product = open('product.txt','r')
+    id = input("Enter product id to search:  ")
+    print()
+    s = ' '
+    while(s):
+        s = product.readline()
+        L = s.split(",")
+        if len(s)>0:  
+            if L[0] == id:
+                print("Product details")
+                print("**************************")
+                print("Product id: ",L[0])
+                print("Product Name: ",L[1])
+                print("Product amount: ",L[2])
+                print("Product price: ",L[3])
 
 def show_products():
     product = open("product.txt","r")

@@ -166,7 +166,7 @@ def search_customer():
         if len(s)>0:
             if int(L[0]) == id:
                 print("Customer details")
-                print("------------------------------")
+                print("****************************")
                 print("Customer id: ",L[0])
                 print("Customer Name: ",L[1])
                 print("Customer Address: ",L[2])
