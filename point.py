@@ -23,6 +23,7 @@ def show_customer_menu():
         2. Create a customer
         3. Update a customer
         4. Delete a customer
+        5. Search customer
         0. Quit
         """)
 
@@ -43,6 +44,9 @@ def show_customer_menu():
         elif option4 == 4:
             print()
             delete_customer()
+        
+        elif option4 == 5:
+            search_customer()
 
         elif option4 == 0:
             print()
@@ -150,6 +154,22 @@ def delete_customer():
     print("Customer is deleted successfuly! ")
     list_customers()
 
+
+def search_customer():
+    customer = open('customer.txt','r')
+    id = int(input("Enter customer id to search:  "))
+    print()
+    s = ' '
+    while(s):
+        s = customer.readline()
+        L = s.split(",")
+        if len(s)>0:
+            if int(L[0]) == id:
+                print("Customer details")
+                print("------------------------------")
+                print("Customer id: ",L[0])
+                print("Customer Name: ",L[1])
+                print("Customer Address: ",L[2])
 
 
 
