@@ -73,6 +73,11 @@ def create_product():
     product_id = input("Enter Product id : ")
     with open("product.txt",'r') as pt_r:
         for line in pt_r.readlines():
+            element_list =[]
+            line_data = line.split(',')
+            element_list.append(line_data[0])
+
+            
             if product_id in line:
                 print()
                 print("The ID already exists!! Enter a a different ID !!")
@@ -101,10 +106,11 @@ def update_product():
         if len(st)>0:
             if J[0] == id:
                 name = input("Enter Product name: ")
-                quantity = input("Enter product quantity : ")
-                assert quantity >=0, f"{quantity} is not greater or equal to zero!! "
-                price = input("Enter the product price : ")
-                temp.write(str(id) + ',' +  name  +  ','  +  quantity + ',' + price + "\n")
+                quantity = int(input("Enter product quantity : "))
+                # assert quantity >= 0, f"{quantity} is not greater or equal to zero!! "
+                price = int(input("Enter the product price : "))
+                # assert price >= 0, f"Price {price} is not greater or equal to zero!! "
+                temp.write(str(id) + ',' +  name  +  ','  +  str(quantity) + ',' + str(price) + "\n")
             else:
                 temp.write(st)
     temp.close()

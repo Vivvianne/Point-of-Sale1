@@ -1,3 +1,7 @@
-5,pots,25,700
-8,hats,50,150
-14,bags,13,400
+5,skilets,800,890
+8,hats,50,700
+3,chairs,15,300
+2,oranges,100,20
+4,books,50,50
+6,pencils,70,25
+11,bags,20,800

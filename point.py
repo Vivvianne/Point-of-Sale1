@@ -79,6 +79,7 @@ def list_customers():
 def create_customer():
     
     pt = open('customer.txt', 'a+', newline='')
+    
     customer_id = input("Enter Customer id : ")
     with open("customer.txt",'r') as pt_r:
         
